@@ -59,7 +59,11 @@ export default {
         async getData() {
             try {
                 this.isShow = false;
-                const {industryRate, industryIncrease, map, event} = await IO.get(API.aiIndustryOverviewIndustryMap);
+                const data = await IO.get(API.aiIndustryOverviewIndustryMap);
+                if (!data || !data.length) {
+                    return;
+                }
+                const {industryRate, industryIncrease, map, event} = data[0];
                 this.setPieChartOption(industryRate);
                 this.setStackedColumnOption(industryIncrease);
                 this.setMapChartOption(map);
@@ -87,7 +91,7 @@ export default {
                     formatter: '{b}: {d}%'
                 },
                 legend: {
-                    top: 40,
+                    top: '18%',
                     left: '5%',
                     orient: 'vertical',
                     itemWidth: 16,
@@ -98,7 +102,7 @@ export default {
                         name: '',
                         type: 'pie',
                         radius: ['30%', '50%'],
-                        center: ['70%', '45%'],
+                        center: ['70%', '40%'],
                         avoidLabelOverlap: false,
                         label: {
                             show: false,
@@ -223,7 +227,7 @@ export default {
 <style lang="less" scoped>
 .industry-map-container {
     // width: 100%;
-    height: 500px;
+    height: 70vh;
     // box-sizing: border-box;
     // padding-right: 10px;
     display: flex;

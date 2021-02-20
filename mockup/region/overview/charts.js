@@ -27,10 +27,10 @@ module.exports = function(req, res) {
             data
         });
     }
-    util.ok(req, res, {
+    util.ok(req, res, [{
         regionData: {
             xData,
             yData
         }
-    });
+    }]);
 }

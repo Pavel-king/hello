@@ -2,7 +2,7 @@ let util = require('../../util');
 
 module.exports = function(req, res) {
     let time = util.formatDate(new Date());
-    util.ok(req, res, {
+    util.ok(req, res, [{
         policy: [
             {
                 time,
@@ -43,5 +43,5 @@ module.exports = function(req, res) {
                 title: '相信品牌，未来已来——兔宝宝衣柜迎来四月品牌季'
             }
         ]
-    });
+    }]);
 }

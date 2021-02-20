@@ -4,24 +4,26 @@
             <div class="title">
                 <h3 class="title-inner">基础技术</h3>
             </div>
-            <div class="general-ai">
-                <div class="item-head">通用人工智能技术</div>
-                <div class="item-body">
-                    <el-tag
-                        v-for="(v, i) in techGeneralAi"
-                        :key="v"
-                        :type="color[i % 5]"
-                    >{{ v }}</el-tag>
+            <div class="content">
+                <div class="general-ai">
+                    <div class="item-head">通用人工智能技术</div>
+                    <div class="item-body">
+                        <el-tag
+                            v-for="(v, i) in techGeneralAi"
+                            :key="v"
+                            :type="color[i % 5]"
+                        >{{ v }}</el-tag>
+                    </div>
                 </div>
-            </div>
-            <div class="area-ai">
-                <div class="item-head">领域人工智能技术</div>
-                <div class="item-body">
-                    <el-tag
-                        v-for="(v, i) in techAreaAi"
-                        :key="v"
-                        :type="color[i % 5]"
-                    >{{ v }}</el-tag>
+                <div class="area-ai">
+                    <div class="item-head">领域人工智能技术</div>
+                    <div class="item-body">
+                        <el-tag
+                            v-for="(v, i) in techAreaAi"
+                            :key="v"
+                            :type="color[i % 5]"
+                        >{{ v }}</el-tag>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,34 +32,36 @@
             <div class="title">
                 <h3 class="title-inner">基础资源</h3>
             </div>
-            <div class="data">
-                <div class="item-head">数据</div>
-                <div class="item-body">
-                    <el-tag
-                        v-for="(v, i) in resourceData"
-                        :key="v"
-                        :type="color[i % 5]"
-                    >{{ v }}</el-tag>
+            <div class="content">
+                <div class="data">
+                    <div class="item-head">数据</div>
+                    <div class="item-body">
+                        <el-tag
+                            v-for="(v, i) in resourceData"
+                            :key="v"
+                            :type="color[i % 5]"
+                        >{{ v }}</el-tag>
+                    </div>
                 </div>
-            </div>
-            <div class="algorithm">
-                <div class="item-head">算法</div>
-                <div class="item-body">
-                    <el-tag
-                        v-for="(v, i) in resourceAlgorithm"
-                        :key="v"
-                        :type="color[i % 5]"
-                    >{{ v }}</el-tag>
+                <div class="algorithm">
+                    <div class="item-head">算法</div>
+                    <div class="item-body">
+                        <el-tag
+                            v-for="(v, i) in resourceAlgorithm"
+                            :key="v"
+                            :type="color[i % 5]"
+                        >{{ v }}</el-tag>
+                    </div>
                 </div>
-            </div>
-            <div class="power">
-                <div class="item-head">算力</div>
-                <div class="item-body">
-                    <el-tag
-                        v-for="(v, i) in resourcePower"
-                        :key="v"
-                        :type="color[i % 5]"
-                    >{{ v }}</el-tag>
+                <div class="power">
+                    <div class="item-head">算力</div>
+                    <div class="item-body">
+                        <el-tag
+                            v-for="(v, i) in resourcePower"
+                            :key="v"
+                            :type="color[i % 5]"
+                        >{{ v }}</el-tag>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,34 +70,36 @@
             <div class="title">
                 <h3 class="title-inner">应用领域</h3>
             </div>
-            <div class="system">
-                <div class="item-head">系统应用</div>
-                <div class="item-body">
-                    <el-tag
-                        v-for="(v, i) in areaSystem"
-                        :key="v"
-                        :type="color[i % 5]"
-                    >{{ v }}</el-tag>
+            <div class="content">
+                <div class="system">
+                    <div class="item-head">系统应用</div>
+                    <div class="item-body">
+                        <el-tag
+                            v-for="(v, i) in areaSystem"
+                            :key="v"
+                            :type="color[i % 5]"
+                        >{{ v }}</el-tag>
+                    </div>
                 </div>
-            </div>
-            <div class="government">
-                <div class="item-head">政企应用</div>
-                <div class="item-body">
-                    <el-tag
-                        v-for="(v, i) in areaGovernment"
-                        :key="v"
-                        :type="color[i % 5]"
-                    >{{ v }}</el-tag>
+                <div class="government">
+                    <div class="item-head">政企应用</div>
+                    <div class="item-body">
+                        <el-tag
+                            v-for="(v, i) in areaGovernment"
+                            :key="v"
+                            :type="color[i % 5]"
+                        >{{ v }}</el-tag>
+                    </div>
                 </div>
-            </div>
-            <div class="industry">
-                <div class="item-head">行业应用</div>
-                <div class="item-body">
-                    <el-tag
-                        v-for="(v, i) in areaIndustry"
-                        :key="v"
-                        :type="color[i % 5]"
-                    >{{ v }}</el-tag>
+                <div class="industry">
+                    <div class="item-head">行业应用</div>
+                    <div class="item-body">
+                        <el-tag
+                            v-for="(v, i) in areaIndustry"
+                            :key="v"
+                            :type="color[i % 5]"
+                        >{{ v }}</el-tag>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,6 +150,11 @@ export default {
             transform: translateY(-50%);
         }
     }
+    .content {
+        flex: 1 1 0px;
+        display: flex;
+        justify-content: space-around;
+    }
     .item-head {
         text-align: center;
         padding: 10px 0px;
@@ -156,13 +167,13 @@ export default {
         display: flex;
         .general-ai {
             flex: 0 0 300px;
-            margin: 10px 80px 10px 80px;
+            // margin: 10px 80px 10px 80px;
             border: 1px solid #dcdfe6;
             border-radius: 10px;
         }
         .area-ai {
             flex: 0 0 300px;
-            margin: 10px 80px 10px 80px;
+            // margin: 10px 80px 10px 80px;
             border: 1px solid #dcdfe6;
             border-radius: 10px;
         }
@@ -173,19 +184,19 @@ export default {
             flex: 0 0 200px;
             border: 1px solid #dcdfe6;
             border-radius: 8px;
-            margin: 10px 50px;
+            // margin: 10px 50px;
         }
         .algorithm {
             flex: 0 0 200px;
             border: 1px solid #dcdfe6;
             border-radius: 8px;
-            margin: 10px 50px;
+            // margin: 10px 50px;
         }
         .power {
             flex: 0 0 200px;
             border: 1px solid #dcdfe6;
             border-radius: 8px;
-            margin: 10px 50px;
+            // margin: 10px 50px;
         }
     }
     .basic-area {
@@ -194,19 +205,19 @@ export default {
             flex: 0 0 200px;
             border: 1px solid #dcdfe6;
             border-radius: 8px;
-            margin: 10px 20px;
+            // margin: 10px 20px;
         }
         .government {
             flex: 0 0 200px;
             border: 1px solid #dcdfe6;
             border-radius: 8px;
-            margin: 10px 20px;
+            // margin: 10px 20px;
         }
         .industry {
             flex: 0 0 450px;
             border: 1px solid #dcdfe6;
             border-radius: 8px;
-            margin: 10px 0px 10px 20px;
+            // margin: 10px 0px 10px 20px;
         }
     }
 }

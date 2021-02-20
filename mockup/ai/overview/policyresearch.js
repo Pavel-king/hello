@@ -1,7 +1,7 @@
 let util = require('../../util');
 
 module.exports = function(req, res) {
-    util.ok(req, res, {
+    util.ok(req, res, [{
         policy: [
             {
                 title: '新一代人工智能发展规划',
@@ -103,5 +103,5 @@ module.exports = function(req, res) {
                 time: '2019-05-14'
             }
         ]
-    });
+    }]);
 }

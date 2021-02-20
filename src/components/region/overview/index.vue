@@ -130,10 +130,14 @@ export default {
         },
         async getChartsData() {
             try {
-                const {regionData} = await IO.post(API.regionIndustryOverviewCharts, {
+                const data = await IO.post(API.regionIndustryOverviewCharts, {
                     type: this.activeTab,
                     city: this.city
                 });
+                if (!data || !data.length) {
+                    return;
+                }
+                const {regionData} = data[0];
                 const titleText = this.city + '区域产业' + this.tabsMap[this.activeTab] + '曲线';
                 this.chartsOption = {
                     title: {
@@ -214,7 +218,11 @@ export default {
         },
         async getRegionEventData() {
             try {
-                const {company, policy} = await IO.get(API.regionIndustryOverviewEvent);
+                const data = await IO.get(API.regionIndustryOverviewEvent);
+                if (!data || !data.length) {
+                    return;
+                }
+                const {company, policy} = data[0];
                 this.companyEventData = company;
                 this.policyEventData = policy;
             } catch (e) {
@@ -236,7 +244,7 @@ export default {
         margin: 10px 0 0 30px;
         h3 {
             font-size: 30px;
-            margin-left: 80px;
+            margin-left: 20%;
         }
         .city-label {
             margin-right: 20px;
@@ -256,7 +264,7 @@ export default {
     .charts-container {
         margin: 0 auto;
         width: 1000px;
-        height: 500px;
+        height: 55vh;
         #region-main-charts {
             width: 100%;
             height: 100%;

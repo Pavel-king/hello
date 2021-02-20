@@ -5,7 +5,7 @@ module.exports = function(req, res) {
         '黑龙江','湖南','安徽','山东','新疆','江苏','浙江','江西','湖北','广西',
         '甘肃','山西','内蒙古','陕西','吉林','福建','贵州','广东','青海','西藏','四川',
         '宁夏','海南','台湾','香港','澳门'];
-    util.ok(req, res, {
+    util.ok(req, res, [{
         industryRate: [
             {name: 'AI+', value: 0.46},
             {name: '智能机器人', value: 0.24},
@@ -48,5 +48,5 @@ module.exports = function(req, res) {
             title: '宝马汽车和戴姆勒将联合开发自动驾驶技术',
             content: '宝马汽车和戴姆勒公司(Daimler AG, DAI.XE, DMLRY)周四表示，正在合作开发自动驾驶技术。两家公司表示，双方签署了...'
         }))
-    });
+    }]);
 }

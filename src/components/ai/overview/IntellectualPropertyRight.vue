@@ -46,7 +46,11 @@ export default {
         async getData() {
             try {
                 this.isShow = false;
-                const {map, ipNumbers, ipEvents, ipProduction} = await IO.get(API.aiIndustryOverviewIntellectualPropertyRight);
+                const data = await IO.get(API.aiIndustryOverviewIntellectualPropertyRight);
+                if (!data || !data.length) {
+                    return;
+                }
+                const {map, ipNumbers, ipEvents, ipProduction} = data[0];
                 this.setMapChartOption(map);
                 this.setIPTrendOption(ipNumbers);
                 this.ipEvents = ipEvents || [];

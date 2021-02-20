@@ -17,7 +17,7 @@ module.exports = function(req, res) {
         baseC = Math.floor(baseC * 1.1);
         baseW = Math.floor(baseW * 1.05);
     }
-    util.ok(req, res, {
+    util.ok(req, res, [{
         map: cities.map(name => ({name, value: Math.floor(Math.random() * 2000)})),
         ipNumbers,
         ipEvents: [
@@ -56,5 +56,5 @@ module.exports = function(req, res) {
             {name: '复旦大学', value: 2550},
             {name: '北京理工大学', value: 2500}
         ]
-    });
+    }]);
 }

@@ -14,13 +14,14 @@ module.exports = function(req, res) {
     const data = [];
     for(let i = 0; i < 100; i++) {
         data.push({
-            id: formatId(i),
+            _id: formatId(i),
             name: '阿里巴巴(中国)网络技术有限公司' + i,
             talent: Math.floor(Math.random() * 100),
             trade: Math.floor(Math.random() * 100),
             innovation: Math.floor(Math.random() * 100),
             brand: Math.floor(Math.random() * 100),
-            competitionIndex: Math.floor(Math.random() * 100)
+            competitionIndex: Math.floor(Math.random() * 100),
+            scoreSum: Math.floor(Math.random() * 400)
         });
     }
     util.ok(req, res, data);

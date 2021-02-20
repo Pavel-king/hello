@@ -1,7 +1,7 @@
 <template>
   <div class="ai-overview-container">
     <div class="tab-container">
-        <el-tabs v-model="activeTab" type="card" @tab-click="handleClick">
+        <el-tabs v-model="activeTab" type="card">
             <el-tab-pane
                 v-for="item in tabs"
                 :key="item.name"
@@ -49,11 +49,6 @@ export default {
             ],
             mapOption: null
         };
-    },
-    methods: {
-        handleClick() {
-            console.log(this.activeTab);
-        }
     }
 }
 </script>

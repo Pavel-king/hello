@@ -23,39 +23,47 @@
             ref="table"
         >
             <el-table-column
-                prop="id"
+                prop="_id"
                 label="企业编号"
-                sortable
-                width="180"
             />
             <el-table-column
                 prop="name"
                 label="企业名称"
-                width="180"
             />
             <el-table-column
                 prop="talent"
                 label="人才"
+                width="80"
                 sortable
             />
             <el-table-column
                 prop="trade"
                 label="外贸"
+                width="80"
                 sortable
             />
             <el-table-column
                 prop="innovation"
                 label="创新"
+                width="80"
                 sortable
             />
             <el-table-column
                 prop="brand"
                 label="品牌"
+                width="80"
                 sortable
             />
             <el-table-column
                 prop="competitionIndex"
                 label="竞争力指数"
+                width="120"
+                sortable
+            />
+            <el-table-column
+                prop="scoreSum"
+                label="总分"
+                width="90"
                 sortable
             />
         </el-table>
@@ -141,7 +149,7 @@ export default {
 .ai-portrait-container {
     background: #fff;
     // width: 100%;
-    padding: 10px 30px;
+    padding: 10px 0px 10px 30px;
     // min-height: calc(100vh - 110px);
     .filter {
         width: 500px;

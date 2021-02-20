@@ -50,7 +50,11 @@ export default {
         async getData() {
             try {
                 this.isShow = false;
-                const {map, talentRate, talentsInfo, tanlentsNumber} = await IO.get(API.aiIndustryOverviewTopLevelTalent);
+                const data = await IO.get(API.aiIndustryOverviewTopLevelTalent);
+                if (!data || !data.length) {
+                    return;
+                }
+                const {map, talentRate, talentsInfo, tanlentsNumber} = data[0];
                 this.setMapChartOption(map);
                 this.setNightingaleRoseOption(talentRate);
                 this.talentsInfo = talentsInfo || [];

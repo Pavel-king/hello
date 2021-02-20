@@ -90,7 +90,11 @@ export default {
         async getData() {
             try {
                 this.isShow = false;
-                const {policy, experts, industry, institution} = await IO.get(API.aiIndustryOverviewPolicyResearch);
+                const data = await IO.get(API.aiIndustryOverviewPolicyResearch);
+                if (!data || !data.length) {
+                    return;
+                }
+                const {policy, experts, industry, institution} = data[0];
                 this.policy = policy || [];
                 this.experts = experts || [];
                 this.industry = industry || [];

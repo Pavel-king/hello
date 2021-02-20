@@ -1,4 +1,9 @@
 # hello
+人工智能分析系统-前端
+
+## config
+node: v10.22.0
+npm: 6.14.6
 
 ## Project setup
 ```

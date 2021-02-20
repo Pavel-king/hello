@@ -97,11 +97,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   cursor: default;
+  min-height: 100vh;
+  .el-container {
+    min-height: 100vh;
+  }
   .nav-side {
     width: 250px!important;
     // height: 100vh;
     background: #545c64;
     color: #fff;
+    // height: 100%;
     .nav-header {
       display: flex;
       height: 50px;

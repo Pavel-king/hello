@@ -6,5 +6,6 @@ export default {
     aiIndustryOverviewIntellectualPropertyRight: '/data/ai/overview/intellectualpropertyright',
     aiIndustryOverviewPolicyResearch: '/data/ai/overview/policyresearch',
 
-    aiIndustryPortraitCompany: '/data/ai/portrait/company'
+    aiIndustryPortraitCompany: '/data/ai/portrait/company',
+    regionSelection: '/data/region/selection/charts'
 };
